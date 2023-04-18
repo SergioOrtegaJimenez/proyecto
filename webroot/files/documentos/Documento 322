@@ -1,0 +1,112 @@
+*C:\wamp\www\RIGECA\webroot\css\mystyle.css
+	-Linea 142 añadida (pestaña del menu se queda marcada de color al mover el raton por el submenu)	
+*C:\wamp\www\RIGECA\View\Elements\menu_apoyo.ctp
+	-Linea 13 eliminada : 'class' => activado, (pestaña Inicio ya no aparece continuamente marcada de color)
+*Para marcar el color de la pagina activa se ha añadido una funcion (linea 20 en adelante) en C:\wamp\www\RIGECA\View\Layouts\default.ctp 
+*Para la pagina añadir servicio, se ha modificado el nombre de la pagina (de add a addservicio) debido a que coincidia tambien con el de añadir unidad de gasto.
+Tambien se ha modificado de add a addservicio en ServiciosController (nombre de la funcion de add a addservicio) y tambien se ha modificado el action de add a addservicio
+en menu-apoyo.
+
+*Se ha cambiado el nombre de la pagina index.ctp a iniciopedido.ctp (para el color de la pestaña listado de pedidos), ademas de las correspondientes modificaciones de ese nombre
+en el controlador, en menu-apoyo y en default.ctp 
+
+*Se ha borrado el código que hacía que en el listado de nueva entrada y nueva salida aparecieran colores para cada tipo de plantilla (archivos crear.ctp y crearSalida.ctp)
+*He modificado el archivo crear.ctp , cambiando en las opciones de plantilla, la etiqueta class por la etiqueta style y que asi no tenga que acceder a un archivo css externo.
+*C:\wamp\www\RIGECA\View\Menus\index.ctp , se ha cambiado el formato de los colores (de rgb a nombre) para cada clase de documento
+*Para eliminar registros, se ha modificado el archivo controlador de registros (se le añade la funcion publica eliminarentrada y eliminar salida)
+*Solucion al fallo al borrar o añadir un pedido (en el controlador de pedidos, cambiar index por iniciopedido)
+*Se ha modificado la linea 102 del archivo index.ctp (color white por green yellow) para que el documento generico aparezca en la tabla de inicio con su correspondiente
+color, ya que no ha sido posible encontrar la causa de que apareciera en blanco
+
+*Se ha modificado el color de las plantillas (plantilla 28 y 31) en la base de datos, ya que el color de la plantilla no se correspondia con el color del RIGECA
+*Se han modificado los archivos buscar y buscar_salida, ambos en la carpeta Registros, para hacer la llamada a eliminarentrada y eliminarsalida en aquellos registros que se quieran eliminar desde una búsqueda
+*Se ha puesto por defecto el campo comentario en el desplegable de la busqueda en las entradas y salidas (se ha añadido al option comentario el atributo selected)
+*Se ha modificado la pagina C:\wamp\www\RIGECA\View\Registros\buscar.ctp y RegistrosController para añadir 2 nuevos campos de busqueda de fecha. En el archivo buscar.ctp 
+se añaden los nuevos campos al formulario de busqueda y en RegistrosController se añade la funcionalidad, en la funcion buscar.
+
+*Se ha modificado la pagina C:\wamp\www\RIGECA\View\Registros\buscar_salida.ctp y RegistrosController para añadir 2 nuevos campos de busqueda de fecha. En el archivo buscar_salida.ctp 
+se añaden los nuevos campos al formulario de busqueda y en RegistrosController se añade la funcionalidad, en la funcion buscarSalida.
+
+*En añadir un proveedor nuevo, cambiar el ultimo campo (añadir certificacion del proveedor) de modo que permita añadir el proveedor aunque no se ponga la certificacion. Archivo C:\wamp\www\RIGECA\Controller\ProveedoresController.php (linea 106)
+*En tipo de criterio y homologacion (añadir proveedores), añadir un campo que indique 'selecciona el tipo de criterio o de homologacion' por defecto y que cuando uno cambie tambien lo haga el otro. Archivo C:\wamp\www\RIGECA\Controller\ProveedoresController.php y C:\wamp\www\RIGECA\View\Proveedores\addProveedor.ctp
+*Modificacion en la plantilla añadir pedido (archivos pedidoscontroller y addpedido)
+*Modificar editar pedido(cambiar fecha de llegada por fecha de solicitud, ya que el campo muestra la fecha de solicitud y en ningun momento introducimos la fecha de llegada). Archivo C:\wamp\www\RIGECA\View\Pedidos\edit.ctp
+*Modificada la pagina de informacion de pedido (archivo C:\wamp\www\RIGECA\View\Pedidos\view.ctp) No funcionaban las pestañas de cada seccion. Se ha cambiado de pestañas a "secciones" que cuando picas en ella, se abre la seccion.
+*En listado de pedidos, al hacer click en ver materiales, hacer que se abra la seccion de materiales directamente. Se han modificado los archivos iniciopedido (linea 125), pedidosController (se ha añadido la funcion materiales) y se ha creado el archivo materiales.ctp en la carpeta "pedidos"
+*Cuando se muestre el pedido, que todas las vistas esten plegadas. Se ha modificado el archivo view.ctp (linea 27) quitando en el uso de la clase la palabra in (class="panel-collapse collapse in" ---> class="panel-collapse collapse")
+*Se ha añadido en la tabla de listado de pedidos (archivo iniciopedidos) el campo fecha de solicitud.
+*Cuando vas a pedidos, añadir pedido y le das a cancelar se produce un error. Se ha modificado para que cuando se le de a cancelar se dirija a iniciopedido. El archivo modificado es addpedido (linea 81)
+*Cambiar en listado de proveedores el boton del numero de ID  de proveedor (igual que en pedidos, que aparezca en un cuadro a color). Se ha cambiado en el archivo index (proveedores) en la linea 63 y 64
+*Cambiar a modo "carpeta" en listado de proveedores la vista (los botones del menu no funcionan). Añadir también un boton "volver". Se ha modificado el archivo view.ctp (proveedores)
+*Cuando se genera una no conformidad en proveedores, al guardar el registro se redirecciona a la vista "carpeta" de pedidos. Debe de redireccionar a la vista "carpeta" de proveedores. Archivo modificado: reclamacionescontroller (linea 164)
+*Cuando se genera una reclamacion en proveedores, al guardar el registro se redirecciona a la vista "carpeta" de reclamaciones. Debe de redireccionar a la vista "carpeta" de proveedores. Archivo modificado: reclamacionescontroller (linea 70)
+*Cuando entramos desde proveedores para hacer una reclamacion y le damos a cancelar se redirecciona a gestion de reclamaciones. Se deberia redireccionar a la vista de proveedor. Archivo modificado: reclamacionescontroller (funcion addreclam) y al archivo edit se le ha cambiado el nombre por reclamacion (tambien ha sido modificado, añadiendole un pie de pagina en la linea 209)
+*boton cancelar tiene fallo de redireccion en gestion de reclamaciones, añadir reclamacion. Archivo modificado: reclamacionescontroller (funcion add, linea 57)
+*Cuando guardamos una reclamacion desde la vista del proveedor, no redirecciona correctamente a la vista del proveedor de nuevo. Archivo modificado: reclamacionescontroller (linea 97, funcion addreclam)
+*Cuando abrimos la "carpeta" no conformidad y reclamacion en proveedores, que aparezcan en la tabla los que han sido introducidos. Cuando guardamos una reclamacion desde la vista de proveedor, tenemos que asignarle a esa reclamacion el id_proveedor porque de momento esta nulo. 
+*En añadir proveedor, activar la funcion de añadir servicio, la cual muestre en un desplegable los servicios guardados en la tabla de la bd. Archivo modificado: proveedorescontroller y se ha añadido el archivo addservicio
+*Crear una nueva pestaña, servicios, en la vista de proveedor. Que se muestre una tabla con los servicios del proveedor y que tenga un boton que borre servicios. El boton añadir servicio de la pestaña datos administrativos hay que trasladarlo a la nueva pestaña servicios. Archivos modificados: view y Proveedorescontroller
+*Añadir en el formulario de pedidos, los campos precio final y fecha de llegada. Archivos modificados: addpedido
+*Añadir en editar pedidos los campos precio final y fecha de llegada. Archivos modificados: edit y pedidoscontroller
+*Añadir en el pdf de pedidos, los campos precio final y fecha llegada. Archivos modificados: pdf (en la carpeta pdf en pedidos)
+*Solucionado error en generar RNC en pedidosm, en la vista Registro de No Conformidad. Archivo modificado: reclamacionescontroller (se le ha añadido la funcion rnc del proveedorescontroller)
+
+
+
+
+
+
+
+
+
+(MODIFICACIONES DESDE EL 22-05-2019)
+*Cambiar formato de fecha en verMes en REGISTROS de entrada/salida. Archivos modificados: index y index_salida
+*Redireccionamiento en PROVEEDORES. Archivos modificados: proveedorescontroller, edit, actualizarcc, addservicio
+*Añadir en la tabla el id del servicio en SERVICIOS y que redireccione en lugar del nombre y remarcar (cuadrado de color verde sobre el id). Archivos modificados: index
+*Redireccionamiento en EMPRESA. Archivos modificados: empresascontroller, edit, add
+*Añadir en la tabla el id de la empresa en EMPRESAS y que redireccione en lugar del nombre y remarcar (cuadrado de color verde sobre el id). Archivos modificados: index
+*Añadir en la tabla el id del material en MATERIALES y que redireccione en lugar del nombre y remarcar (cuadrado de color verde sobre el id). Archivos modificados: index
+*Redireccionamiento en DOCUMENTACION. Archivos creados: archivoview // Archivos modificados: archivo, view, documentacionescontroller
+*Añadir en la tabla el id del documento en DOCUMENTACION y que redireccione en lugar del nombre y remarcar (cuadrado de color verde sobre el id). Archivos modificados: index
+*Remarcar el campo cod.reclamacion en la tabla de RECLAMACIONES. Archivo modificado: index
+*Cambiar formato de fecha en DOC.ADICIONALES. Archivo modificado: eventos, editar
+*Cambiar vista de las RECLAMACIONES. Archivos modificados: view
+*Redondear color de las esquinas de las tablas de la vista resumen de RECLAMACIONES. Archivo modificado: viewre
+*Separar botones de la vista resumen de RECLAMACIONES. Archivo modificado: viewre
+*Cambiar formato fecha de finalizar reclamacion en la vista resumen de RECLAMACIONES. Archivo modificado: cierre
+*Formato de fecha cambiado en crear reclamacion en RECLAMACIONES. Archivo modificado: reclamacion
+*Redireccionamiento en RECLAMACIONES. Archivo modificado: add (carpeta RECURSOS)
+*Remarcar el id de accion en cuadro verde en ACCIONES. Archivo modificado: index
+*Generar ACCION en añadir accion no funciona. Las distintas pestañas no funcionan correctamente. Archivo modificado: add (archivo en la carpeta ACCIONES)
+*Añadir datepicker en generar una accion en ACCIONES, en los campos plazo de implantacion y plazo de cierre. Archivo modificado: add (archivo en la carpeta ACCIONES)
+*Pequeño cambio en PEDIDOS: addpedido (linea 119) y finalizar (linea 62)
+*Redireccionamiento al pulsar cancelar en añadir accion en ACCIONES, desde RECLAMACIONES. Archivo creado: accionre (situado en ACCIONES) // Archivos modificados: accionescontroller, viewre (en RECLAMACIONES)
+*Redireccionamiento en RECLAMACIONES al guardar una accion. Archivo modificado: accionescontroller
+*El boton editar RC en la vista resumen en RECLAMACIONES no tiene funcionalidad. Archivo creado: edit // Archivos modificados: reclamacionescontroller
+*Redireccionamiento cuando en editar rc le damos a guardar en RECLAMACIONES. Archivo modificado: reclamacionescontroller
+*Editar formato de fecha en la tabla gestion de reclamaciones en RECLAMACIONES. Archivo modificado: index
+*Editar formato de fecha en la tabla gestion de NC en RECLAMACIONES. Archivo modificado: indexrnc
+*En la busqueda por fecha de apertura en gestion de NC en RECLAMACIONES, añadir un datepicker. Trasladar el campo de busqueda fecha a un cuadro de texto separado. Archivos modificados: reclamacionescontroller, indexrnc
+*En el nuevo campo fecha en RECLAMACIONES, eliminar la flecha del campo select. Archivo modificado:  indexrnc
+*Permitir en gestion de las NC, en RECLAMACIONES, que la busqueda pueda ser mixta (por criterios de busqueda junto con una fecha o por separado, justo como esta ahora). Archivos modificados: reclamacionescontroller
+*Cambiar formato de fecha de apertura en la tabla de registro de acciones en ACCIONES. Archivo modificado: index
+*En busqueda de listado de eventos y cursos en DOCADICIONALES, añadir un datepicker. Trasladar el campo de busqueda de fecha a un cuadro de texto separado. Archivos modificados: eventos y docadicionalescontroller
+*En el nuevo campo fecha en DOCADICIONALES, eliminar la flecha del campo select. Archivo modificado: eventos
+*Permitir en listado de eventos y cursos, en DOCADICIONALES, que la busqueda pueda ser mixta (criterios de busqueda y fecha juntos o por separado). Archivos modificados: docadicionalescontroller
+*Cambiar vista de las empresas a vista "carpeta" en EMPRESAS. Archivos modificados: view
+*Redireccionamiento en la vista recurso de EMPRESAS al cancelar. Archivo creado: addemp (en RECURSOS) // Archivo modificado: view (en EMPRESAS) y recursoscontroller
+*Redireccionamiento en la vista recurso de EMPRESAS al guardar. Archivo modificado: recursoscontroller
+*Cambiar vista de RNC a vista carpeta en RECLAMACIONES. Archivos modificados: view
+*Redondear color de las esquinas de las tablas de la vista resumen de RNC en RECLAMACIONES. Archivo modificado: view
+*Cambiar vista de acciones a vista carpeta en ACCIONES. Archivos modificados: view
+
+
+
+
+*En REGISTRO de entrada, modificar la plantilla "galileo", añadiendo los campos año y modalidad. Modificaciones: Se ha modificado en el phpmyadmin, en la tabla plantillas, la plantilla 31. Se le ha cambiado el nombre a Plan Propio Galileo. Archivos modificados: plantillaentrada, crear, editar y editar_salida
+*En REGISTRO de entrada, no se guarda el valor que se introduce en el campo de referencia. Archivos modificados: base de datos se ha borrado el campo referencia de la tabla registros de entrada (no es necesario borrarlo de la BD del servidor), se ha borrado el codigo referente al campo de referencia del archivo plantilla entrada, se ha añadido a las plantillas (en la BD) un campo5 (será el de referencia otri) y se ha modificado el archivo registroscontroller
+*En REGISTRO de salida, añadir la plantilla "galileo", similar a la anterior. Archivos modificados: crear_salida, plantilla_salida
+*Para REGISTRO de entrada y salida, se ha modificado el archivo index de MENUS para que el color del Plan Propio Galileo aparezca de forma correcta en las tablas de inicio.
+*Añadir ,en registro de entrada y salida, para la búsqueda un nuevo campo (separar el campo "comentario" del desplegable principal) de modo que quedarian 3 campos de busqueda: el campo principal, el campo fecha y el nuevo campo comentario. Archivos modificados: buscar, buscarsalida, registroscontroller
+-Dar funcionalidad a la vista "contratos" en EMPRESA, ya que el formulario es similar al de "añadir empresa", por lo que habría que crear un nuevo formulario. Archivo creado: addcontrato // Archivos modificados: viewemp (se ha comentado el codigo para que no aparezca la busqueda en esta vista) , empresascontroller
+-Mostrar recurso guardado en la tabla de la vista recursos en EMPRESAS. Archivo modificado:  se ha añadido el campo idemp en la tabla recursos de la BD, se ha modificado archivo en la carpeta Model. (COMPROBAR EN EL PHPMYADMIN Y EN EL CODIGO DEL RIGECA SI HAY QUE DEFINIR EL CAMPO IDEMP)

@@ -1,0 +1,24 @@
+<?php
+/**
+ * Archivo que recibe por post los valores enviados por jquery
+ * Tiene que recibir:
+ *  $_POST["numero1"]
+ *  $_POST["numero2"]
+ */
+if(isset($_POST["numero1"]) && isset($_POST["numero2"]) && $_POST["numero1"] && $_POST["numero2"])
+{
+    if(is_numeric($_POST["numero1"]) && is_numeric($_POST["numero2"]))
+    {
+        $suma=number_format($_POST["numero1"]+$_POST["numero2"],2,",",".");
+        $resta=number_format($_POST["numero1"]-$_POST["numero2"],2,",",".");
+        $multiplicacion=number_format($_POST["numero1"]*$_POST["numero2"],2,",",".");
+        $valores=array("suma"=>$suma,"resta"=>$resta, "multiplicacion"=>$multiplicacion);
+    }else{
+        $valores=array("error"=>"los valores tienen que ser numericos");
+    }
+}else{
+    $valores=array("error"=>"tienes que introducir los dos valores");
+}
+
+echo json_encode($valores);
+?>

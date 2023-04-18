@@ -1,0 +1,6 @@
+<script>
+var myvar = <?php// echo json_encode($caso['Caso']['id']); ?>;
+	var varna = 80;
+	//document.write(varna);
+
+	</script>

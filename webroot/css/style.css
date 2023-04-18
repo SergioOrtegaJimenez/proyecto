@@ -1,0 +1,146 @@
+.greySelect {opacity: 0.56; font-size: 1.4em; background-color:#333333; }
+.yellow{opacity: 0.56; font-size: 1.4em; background-color:#FFFF00;}
+.red{opacity: 0.56; font-size: 1.4em; background-color:#FF0000;}
+.green{opacity: 0.56; font-size: 1.4em; background-color:#008000;}
+.lightgrey{opacity: 0.56; font-size: 1.4em; background-color:#D3D3D3;}
+.DeepSkyBlue{opacity: 0.56; font-size: 1.4em; background-color:#00BFFF;}
+.violet{opacity: 0.56; font-size: 1.4em; background-color:#9400D3;}
+.brown{opacity: 0.56; font-size: 1.4em; background-color:#A52A2A;}
+.orange{opacity: 0.56; font-size: 1.4em; background-color:#FFA500;}
+.pink{opacity: 0.56; font-size: 1.4em; background-color:#FFC0CB;}
+.magenta{opacity: 0.56; font-size: 1.4em; background-color:#FF00FF;}
+.cyan{opacity: 0.56; font-size: 1.4em; background-color:#00FFFF;}
+.LemonChiffon{opacity: 0.56; font-size: 1.4em; background-color:#FFFACD;}
+.PapayaWhip{opacity: 0.56; font-size: 1.4em; background-color:#FFEFD5;}
+.PeachPuff{opacity: 0.56; font-size: 1.4em; background-color:#FFDAB9;}
+.Khaki{opacity: 0.56; font-size: 1.4em; background-color:#F0E68C;}
+.Orchid{opacity: 0.56; font-size: 1.4em; background-color:#DA70D6;}
+.SlateBlue{opacity: 0.56; font-size: 1.4em; background-color:#6A5ACD;}
+.Coral{opacity: 0.56; font-size: 1.4em; background-color:#FF7F50;}
+.GreenYellow{opacity: 0.56; font-size: 1.4em; background-color:#ADFF2F;}
+.MediumSpringGreen{opacity: 0.56; font-size: 1.4em; background:#00FA9A;}
+.PaleTurquoise{opacity: 0.56; font-size: 1.4em; background-color:#AFEEEE;}
+.DarkTurquoise{opacity: 0.56; font-size: 1.4em; background-color:#00CED1;}
+.LightSkyBlue{opacity: 0.56; font-size: 1.4em; background-color:#87CEFA;}
+.LightSteelBlue{opacity: 0.56; font-size: 1.4em; background-color:#B0C4DE;}
+.CadetBlue{opacity: 0.56; font-size: 1.4em; background-color:#5F9EA0;}
+.Cornsilk{opacity: 0.56; font-size: 1.4em; background-color:#FFF8DC;}
+.Bisque{opacity: 0.56; font-size: 1.4em; background-color:#FFE4C4;}
+.SandyBrown{opacity: 0.56; font-size: 1.4em; background-color:#F4A460;}
+.RosyBrown{opacity: 0.56; font-size: 1.4em; background-color:#BC8F8F;}
+.Goldenrod{opacity: 0.56; font-size: 1.4em; background-color:#DAA520;}
+.MintCream{opacity: 0.56; font-size: 1.4em; background-color:#F5FFFA;}
+.Beige{opacity: 0.56; font-size: 1.4em; background-color:#F5F5DC;}
+.AntiqueWhite{opacity: 0.56; font-size: 1.4em; background-color:#FAEBD7;}
+.MistyRose{opacity: 0.56; font-size: 1.4em; background-color:#FFE4E1;}
+.Gainsboro{opacity: 0.56; font-size: 1.4em; background-color:#DCDCDC;}
+
+.cabecera{
+  text-align: center !important;
+  font-size: 22px !important;
+  font-weight: bold;
+}
+.col1{
+  padding-top: 30px;
+  width: 120px;
+  height: 90px;
+}
+.col2{
+  padding-top: 20px;
+  width: 120px;
+  height: 120px;
+}
+.info{
+  background-color: #638ccc !important;
+}
+
+.primero{
+  background-color: #508ce5;
+  font-size: 20px !important;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+  padding-top: 30px;
+}
+.primeroPedido{
+  background-color: #508ce5;
+  font-size: 20px !important;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+  padding-top: 10px;
+}
+.fecha{
+    width: 20% !important;
+}
+
+#parent {
+    position:relative;
+}
+.tabla1{
+  display: inline-block;
+  border: 1px;
+  border-color: red;
+}
+.bloque1{
+  width: 300px;
+}
+
+.pie{
+  text-align: right;
+  position:relative;
+  padding-top: 25px;
+  padding-right: 20px;
+}
+.pieFirma{
+  text-align: right;
+  position:relative;
+  padding-top: 25px;
+  padding-right: 250px;
+}
+.primerpie{
+  text-align: right;
+  position:relative;
+  padding-top: 15px;
+  padding-right: 20px;
+}
+.sinfondo{
+  background-color: white;
+  color: black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+}
+
+.sinpadding td{
+  padding: 0px 0px 0px 5px !important;
+}
+
+.conpadding td{
+  padding: 5px 10px 5px 10px !important;
+}
+
+.actuales{
+  text-align: justify !important;
+  padding-right: 40px !important;
+  font-size: 14px;
+}
+.tituloPedido{
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+
+th {
+    background-color: #31588a;
+    color: white;
+}

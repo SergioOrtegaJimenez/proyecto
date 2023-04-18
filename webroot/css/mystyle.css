@@ -1,0 +1,256 @@
+.greySelect {font-size: 1.4em; background-color:greyselect; }
+.yellow{font-size: 1.4em; background-color:yellow;}
+.red{font-size: 1.4em; background-color:red;}
+.green{font-size: 1.4em; background-color:green;}
+.lightgrey{font-size: 1.4em; background-color:lightgrey;}
+.DeepSkyBlue{font-size: 1.4em; background-color:deepskyblue;}
+.violet{font-size: 1.4em; background-color:violet;}
+.brown{font-size: 1.4em; background-color:brown;}
+.orange{font-size: 1.4em; background-color:orange;}
+.pink{font-size: 1.4em; background-color:pink;}
+.magenta{font-size: 1.4em; background-color:magenta;}
+.cyan{font-size: 1.4em; background-color:cyan;}
+.LemonChiffon{font-size: 1.4em; background-color:lemonchiffon;}
+.PapayaWhip{font-size: 1.4em; background-color:papayawhip;}
+.PeachPuff{font-size: 1.4em; background-color:peachpuff;}
+.Khaki{font-size: 1.4em; background-color:khaki;}
+.Orchid{font-size: 1.4em; background-color:orchid;}
+.SlateBlue{font-size: 1.4em; background-color:slateblue;}
+.Coral{font-size: 1.4em; background-color:coral;}
+.GreenYellow{font-size: 1.4em; background-color:greenyellow;}
+.MediumSpringGreen{font-size: 1.4em; background:mediumspringgreen;}
+.PaleTurquoise{font-size: 1.4em; background-color:paleturquoise;}
+.DarkTurquoise{font-size: 1.4em; background-color:darkturquoise;}
+.LightSkyBlue{font-size: 1.4em; background-color:lightskyblue;}
+.LightSteelBlue{font-size: 1.4em; background-color:lightsteelblue;}
+.CadetBlue{font-size: 1.4em; background-color:cadetblue;}
+.Cornsilk{font-size: 1.4em; background-color:cornsilk;}
+.Bisque{font-size: 1.4em; background-color:bisque;}
+.SandyBrown{font-size: 1.4em; background-color:sandybrown;}
+.RosyBrown{font-size: 1.4em; background-color:rosybrown;}
+.Goldenrod{font-size: 1.4em; background-color:goldenrod;}
+.MintCream{font-size: 1.4em; background-color:mintcream;}
+.Beige{font-size: 1.4em; background-color:beige;}
+.AntiqueWhite{font-size: 1.4em; background-color:antiquewhite;}
+.MistyRose{font-size: 1.4em; background-color:mistyrose;}
+.Gainsboro{font-size: 1.4em; background-color:gainsboro;}
+
+.divTable{
+        display: table;
+		margin: 0 auto;
+}
+.divTableRow {
+        display: table-row;
+}
+.divTableHeading {
+        font-size: 1.4em; background-color: #EEE;
+        display: table-header-group;
+}
+.divTableCell, .divTableHead {
+		text-align: center;
+        display: table-cell;
+        padding: 3px 10px;
+}
+
+.logincontainer {
+        border: 1px solid #ddd;
+		margin-left: 38%;
+		margin-right:38%;
+		border-radius: 10px;
+		font-size: 1.4em; background: #f9f9f9;
+}
+
+.column {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+}
+
+.table {
+	border: 2px solid #808080;
+	border-radius: 10px;
+	font-size: 1.2em;
+}
+
+.tabletd {
+	border-bottom: 1px solid #ddd;
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align:center;
+}
+
+.table-buscar{
+  margin-top: 20px;
+}
+
+.tabletrtit {
+	font-size: 1.4em; background-color:#bbbbbb;
+	text-align:center;
+}
+
+.tabletralt {
+	font-size: 1.4em; background-color:#dddddd;
+}
+
+.tabletralt2 {
+	font-size: 1.4em; background-color:#ddddff;
+}
+
+.divTableBorder {
+	border: 2px solid #808080;
+	border-radius: 10px;
+}
+
+.divTableRow > .divTableCell {
+	text-align: center;
+}
+.menu-apoyo ul {           
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; /* ////////////////////////////////////////////COLOR DEL MENU SUPERIOR */
+}
+
+
+
+
+.menu-apoyo li {	
+    float: left;
+	
+
+}
+
+
+.menu-apoyo li a, .menu-desplegable {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	
+}
+
+.menu-apoyo li a:hover, .bajarmenu:active .menu-desplegable {
+    background-color: #013ADF;
+}
+
+
+.flechita select {
+ border: 1px solid #ccc;
+ background: none !important;
+ -moz-appearance: none;
+ -webkit-appearance: none;
+ appearance: none;
+ }
+
+
+
+
+.menu-apoyo li.bajarmenu:hover {
+    display: inline-block;
+	background-color: #013ADF; /* ///////////////////////////////////////////////////////pestaña del menu se queda marcada de color al mover el raton por el submenu ///////////*/
+}
+
+.menu-apoyo .bajarmenu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;/* ////////////////////////////////////////////color del submenu al pasar el raton */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.menu-apoyo .bajarmenu-content a {
+    color: black;/* ////////////////////////////////////////////color del texto de las pestañas del submenu sin pasar el raton por encima de la pestaña del submenu */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+	
+}
+th{
+  background-color: #638ccc;
+  color: white;
+}
+
+.pika-table th {
+  color: white !important;
+}
+
+.menu-apoyo .bajarmenu-content a:hover {
+	background-color: #013ADF; color: white;
+	}/* ////////////////////////////////////////////color del texto de las pestañas del submenu al pasar el raton por encima de la pestaña del submenu */
+
+.menu-apoyo .bajarmenu:hover .bajarmenu-content {
+    display: block;
+}
+
+.navbar{
+  border-radius: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+/* The switch - the box around the slider */
+.switch {
+ position: relative;
+ display: inline-block;
+ width: 60px;
+ height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: #ccc;
+ -webkit-transition: .4s;
+ transition: .4s;
+}
+
+.slider:before {
+ position: absolute;
+ content: "";
+ height: 26px;
+ width: 26px;
+ left: 4px;
+ bottom: 4px;
+ background-color: white;
+ -webkit-transition: .4s;
+ transition: .4s;
+}
+
+input:checked + .slider {
+ background-color: #2196F3;
+}
+
+input:focus + .slider {
+ box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+ -webkit-transform: translateX(26px);
+ -ms-transform: translateX(26px);
+ transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+ border-radius: 34px;
+}
+
+.slider.round:before {
+ border-radius: 50%;
+}
+
+<!--
+.Estilo6 {font-size: 11px}
+.Estilo7 {font-size: 10px}
+-->
